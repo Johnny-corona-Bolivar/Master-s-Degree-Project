@@ -1,4 +1,5 @@
-# Master's Degree-Project
+# Smartphone Security Project
+
 
 ### Project Brief:
 Throughout the course content, topics such as OWASP, static and dynamic analysis, vulnerabilities, and secure development have been discussed. Smartphones are not immune to attacks. OWASP defines a Top 10 list of risks for mobile applications (OWASP Mobile Top 10 - 2016).
