@@ -192,6 +192,13 @@ Once the campaign was launched:
 - HTML email and landing page manipulation  
 - Security metrics collection and interpretation  
 - Secure lab setup using VirtualBox and Kali Linux
+- Cyber Threat Intelligence (CTI) collection and analysis  
+- Practical experience with phishing or malware simulation tools  
+- Network traffic analysis and log investigation  
+- Understanding of attack frameworks and kill chains  
+- Incident response and forensic investigation techniques  
+- Report writing and technical documentation  
+- Critical thinking and problem-solving in cybersecurity contexts
 
 ---
 
