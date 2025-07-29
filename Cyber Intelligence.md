@@ -18,6 +18,11 @@ The goal is to understand how attackers design campaigns, how users interact wit
 - Create customized templates based on user roles and behavior
 - Monitor user interaction with phishing emails and landing pages
 - Raise awareness of phishing threats through education and analysis
+- Understand the tactics, techniques, and procedures (TTPs) used in phishing or malware attacks.
+- Perform a detailed analysis of the chosen attack vector.
+- Simulate the attack in a controlled environment to study its behavior and impact.
+- Identify indicators of compromise (IOCs) and develop detection strategies.
+- Enhance practical skills in cyber threat intelligence gathering and incident response
 
 ---
 
