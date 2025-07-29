@@ -1,7 +1,15 @@
-# Smartphone Security Project
+## 📱 Mobile App Vulnerability Analysis using AndroGoat
+
+This project is part of a cybersecurity master's program and focuses on the security analysis of Android applications through static and dynamic testing techniques. The primary goal is to identify vulnerabilities in a deliberately insecure app (AndroGoat), following the OWASP Mobile Top 10 and MASVS guidelines. By inspecting permissions, configuration files, and app behavior, the project aims to simulate real-world mobile threat assessments and highlight common security misconfigurations in outdated Android environments.
+
+---
+
+## 🧠 Project Overview
+
+This project focuses on the static and dynamic analysis of a deliberately vulnerable Android application, **AndroGoat**, as part of a broader study on mobile security. Using tools aligned with OWASP Mobile Top 10, the application is reverse-engineered and tested for multiple categories of vulnerabilities. The goal is to better understand common mobile threats, app misconfigurations, and outdated security practices.
 
 
-### Project Brief:
+## 🧠 Project Brief:
 Throughout the course content, topics such as OWASP, static and dynamic analysis, vulnerabilities, and secure development have been discussed. Smartphones are not immune to attacks. OWASP defines a Top 10 list of risks for mobile applications (OWASP Mobile Top 10 - 2016).
 
 Task:
@@ -24,29 +32,43 @@ Static Analysis – Inspect app resources, source code, configuration files, per
 Dynamic Analysis – Execute the app and monitor its activity and behavior in real-time.
 
 
+---
 
-## Objective
 
 
-To assess the security of Android mobile applications by analyzing three APK files from different sources, aiming to identify common vulnerabilities based on the OWASP Mobile Top 10. The goal is to develop a critical understanding of mobile app risks by applying both static and dynamic analysis, using practical tools that strengthen real-world mobile security practices. This hands-on experience was designed to deepen understanding of security.
+## 🎯 Objectives
 
-### Skills Learned
+- Perform static and dynamic security analysis on three Android applications: **AndroGoat** (intentionally vulnerable), **TodoList** (official), and **Vanced** (from an unofficial repository).
+- Identify and compare vulnerabilities based on the **OWASP Mobile Top 10** and **MASVS** standards.
+- Highlight security risks introduced by outdated Android APIs, insecure permissions, and weak configurations.
+- Analyze app behavior, data handling, network communication, and permission models.
+- Gain hands-on experience with modern mobile security testing tools in a controlled, virtualized lab environment.
+
+## 📚 Skills Acquired
 
 
 - Static analysis of APK files, including inspection of source code, configuration files, and declared permissions.
 - Dynamic analysis of app behavior, using emulators and monitoring tools to detect suspicious activity, network connections, and resource usage.
 - Identification of mobile vulnerabilities based on the OWASP Mobile Top 10, such as insecure data storage, improper cryptography, or data exposure.
 - Comparative risk evaluation based on APK source (unofficial, unverified repository, and official store), building critical thinking for mobile security assessment.
+- Conducting full lifecycle mobile app security testing
+- Manual reverse engineering using Apktool and JADX 
+- Network traffic inspection and endpoint detection  
+- Certificate analysis and validation  
+- Writing structured and evidence-based security reports  
 
 
-### Tools Used
+## 🔧 Tools & Technologies Used
 
-- Android Studio – Integrated development environment (IDE) for building, running, and debugging Android applications.
-- Apktool – Tool for reverse engineering Android APKs to decode resources and analyze app structure.
-- ADB (Android Debug Bridge) – Command-line tool to communicate with Android devices for debugging and app interaction.
-- VirusTotal / ShenmeApp – Online analysis platforms for scanning APKs and detecting malware or suspicious behavior.
-- Jadx – Decompiler that converts Android APKs into readable Java source code for static analysis.
-- MobSF (Docker) – All-in-one automated mobile security framework for static and dynamic analysis of Android/iOS apps.
+- **Android Studio**– Integrated development environment (IDE) for building, running, and debugging Android applications.
+- **Apktool** – Tool for reverse engineering Android APKs to decode resources and analyze app structure.
+- **ADB (Android Debug Bridge)** – Command-line tool to communicate with Android devices for debugging and app interaction.
+- **VirusTotal**/ **ShenmeApp** – Online analysis platforms for scanning APKs and detecting malware or suspicious behavior.
+- **JADX** – Decompiler that converts Android APKs into readable Java source code for static analysis.
+- **MobSF (Mobile Security Framework)**– All-in-one automated mobile security framework for static and dynamic analysis of Android/iOS apps.
+- **APK Downloader** – Tool to obtain APKs for offline analysis
+
+
 
 ## Steps :
 *Now we will proceed to extract the files for analysis using the apktool tool with the command:
