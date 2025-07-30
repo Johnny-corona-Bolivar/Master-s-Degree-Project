@@ -137,7 +137,7 @@ Key elements:
 
 ---
 
-# 🛡️  Ethical Hacking
+# 🛡️ Project 4- Ethical Hacking
 
 ## 📜 Project Description
 
@@ -206,23 +206,54 @@ Steps include:
 
 
 
-## ⚙️ Project 5 – Vulnerability Exploitation & Docker Deployment
+## ⚙️ Project 5 – Secure Development
 
-**Objective:**  
-Set up and analyze the WackoPicko vulnerable web application in Docker. Identify and exploit vulnerabilities, then provide remediation suggestions.
+## 📜 Project Description
+This project focuses on analyzing and improving the security of a vulnerable web application as part of a Secure Development practical exercise.
+The application used is **WackoPicko**, a deliberately vulnerable PHP web app available at:  
+➡️ [https://github.com/adamdoupe/WackoPicko](https://github.com/adamdoupe/WackoPicko)
 
-**Steps Followed:**
+As part of the exercise, the Docker environment used to host WackoPicko must also be documented.
+
+---
+
+## ✅ Objective 1 – Vulnerability Identification  
+- Use a semi-automated tool (e.g., **OWASP ZAP** or **Vega**) to identify application vulnerabilities.
+- Document:
+  - Total number of findings.
+  - Risk level classification (low, medium, high, critical).
+  - Categorization of vulnerabilities by type (e.g., XSS, SQLi, CSRF, etc.).
+
+## ✅ Objective 2 – Vulnerability Exploitation  
+- Exploit the discovered vulnerabilities.
+- Explain how each vulnerability was exploited and what the result was.
+- Include relevant **screenshots** as evidence of successful exploitation.
+
+## ✅ Objective 3 – Remediation & Secure Coding  
+- Propose at least **one preventive measure** per vulnerability.
+  - This may include secure code modifications.
+- Optionally suggest **additional best practices** for each vulnerability category to prevent future issues.
+
+
+## 💡 Steps Followed:
 1. Deployed WackoPicko via Docker and documented the setup  
 2. Detected vulnerabilities using `OWASP ZAP` and `Vega`  
 3. Exploited flaws such as XSS and SQLi, showing impact  
 4. Proposed fixes in application code and highlighted security best practices
 
-**Skills Developed:**
+## 📚 Skills Developed
 - Dockerized deployment of vulnerable applications  
 - Use of semiautomated scanning tools  
 - Hands-on vulnerability exploitation  
 - Secure development recommendations  
 - Reporting vulnerabilities with evidence
+- Secure coding analysis and vulnerability identification  
+- Working with vulnerable web applications  
+- Hands-on experience with ZAP and/or Vega  
+- Web application penetration testing fundamentals  
+- Practical exploitation of web vulnerabilities  
+- Mitigation planning and secure development practices  
+- Docker-based web environment setup and documentation 
 
 ---
 
@@ -230,6 +261,14 @@ Set up and analyze the WackoPicko vulnerable web application in Docker. Identify
 
 **Objective:**  
 Act as part of a corporate incident response team investigating three different incidents across Australia, Italy, and Spain.
+- 🇦🇺 **Australia** – Data breach via phishing
+- 🇮🇹 **Italy** – Unauthorized access to an accounting server
+- 🇪🇸 **Spain** – Ransomware infection in a production server
+
+As part of the internal incident response team, the objective is to assess each incident, analyze available evidence, and implement mitigation strategies to prevent recurrence.
+
+---
+
 
 **Incident Summaries:**
 
@@ -242,12 +281,19 @@ Act as part of a corporate incident response team investigating three different 
 - **Spain (Ransomware Infection):**  
   Investigated ransomware attack affecting textile server with .NM4 extension. Reviewed open ports and ransom note, proposed network segmentation and backup strategies.
 
-**Skills Developed:**
+## 📚 Skills Developed
 - Parsing logs with custom scripts  
 - Detection of phishing campaigns and leaked credentials  
 - Threat modeling and risk assessment  
 - Ransomware analysis and containment  
 - Implementation of preventive countermeasures
+- Incident categorization and triage
+- Threat identification (phishing, ransomware, unauthorized access)
+- Log analysis and custom script development
+- IOC extraction and user/email identification
+- Ransomware behavior analysis
+- Implementation of security countermeasures
+- Documentation and incident response planning
 
 ---
 
