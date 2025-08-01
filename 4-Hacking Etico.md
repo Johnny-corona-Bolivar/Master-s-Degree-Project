@@ -172,6 +172,7 @@ The following command can reveal if any PHP-based pages on the UCM site contain 
      www.ucm.es: 147.96.1.15"
 
      "The report"
+     
      <img width="886" height="116" alt="image" src="https://github.com/user-attachments/assets/a72033fc-1fc0-47bf-926b-21dc3cc869f2" />
      <img width="886" height="327" alt="image" src="https://github.com/user-attachments/assets/87d130a1-aa0f-46af-8bbb-589a79671afa" />
      <img width="886" height="581" alt="image" src="https://github.com/user-attachments/assets/ee2f2d3c-2090-4356-856a-c0d0ea1f9fea" />
@@ -219,7 +220,7 @@ The following command can reveal if any PHP-based pages on the UCM site contain 
     "We inspect the source code and obtain a FLAG:
       FLAG{B13N_Y4_T13N3S_UN4_+}
 
-    Bypass_Login_1
+    - **Bypass_Login_1**
 
     <img width="700" height="356" alt="image" src="https://github.com/user-attachments/assets/2eb7de2a-fdee-42fb-8ff4-8455001efb81" />
 
@@ -228,8 +229,57 @@ The following command can reveal if any PHP-based pages on the UCM site contain 
     <img width="866" height="485" alt="image" src="https://github.com/user-attachments/assets/0a22d671-a0ef-47d7-add0-cd4093725c72" />
 
     password.value==’supersecret’ and admin.
-    flag: BIEN! Tu flag es: FLAG{LOGIN_Y_JAVASCRIPT}
+   **flag: BIEN! Tu flag es: FLAG{LOGIN_Y_JAVASCRIPT}**
     <img width="692" height="188" alt="image" src="https://github.com/user-attachments/assets/f6c8af82-88fa-48cb-b0be-09ddfafcf25e" />
+
+    "We use Nmap to scan the IP address and gather more information."
+    
+    <img width="900" height="90" alt="image" src="https://github.com/user-attachments/assets/6ec820cc-067e-4698-8e38-74f744df447d" />
+
+    "With that Nmap command, a report document is generated, which will be attached to this work.
+      - It shows the following open ports:
+      - Port 21/tcp with an FTP service that allows anonymous login, which we will exploit later.
+      - Port 22/tcp with OpenSSH on Ubuntu.
+      - Port 25/tcp with an SMTP service.
+      - Port 80/tcp with an Apache HTTPD server, including a /cyberacademy path and a robots.txt file."
+
+    "And the other ports, such as 110 (POP3 service), 119 (NNTP), and 4555, are also open.
+    We observe that there is interesting information that could potentially be exploited.
+    We now attempt to exploit the services running on the machine, starting with port 21 (FTP):"
+
+    <img width="517" height="286" alt="image" src="https://github.com/user-attachments/assets/758c1f28-32de-42cb-bdd5-dfcbddbbf767" />
+
+    "We use ls to view the contents, and although the scan already showed us that there is a file named flag.txt, we access it:"
+
+    <img width="886" height="387" alt="image" src="https://github.com/user-attachments/assets/1e31d5bf-eade-4e40-a53e-a9a8aa6d6e61" />
+
+    **We open it and obtain the FLAG: FLAG{FTP_4n0nym0us_G00D_JoB!}**
+
+    "We use the path provided by the Nmap scan: http://192.168.1.141/cyberacademy/ and it gives us the FLAG:
+    **FLAG{YEAH_R0B0T$.RUL3$}"**
+
+
+   - We go to the second link, which is **Bypass_login_2.**
+
+     <img width="700" height="461" alt="image" src="https://github.com/user-attachments/assets/8aaa786d-8a6c-4385-b157-94845dcf1f46" />
+
+     "We observe a form which we will attempt to access later, as it may require the use of several techniques such as SQL injection, brute force, and command injection.
+      We use Burp Suite to capture the request information and inject GET or POST parameters accordingly."
+
+      <img width="886" height="270" alt="image" src="https://github.com/user-attachments/assets/2f8c243b-def5-4228-8639-04913d03be8b" />
+
+
+     
+
+     
+
+    
+
+   
+    
+
+    
+
 
 
 
